@@ -1,0 +1,15 @@
+<h2><%= @article.title %>
+<ul class="pagination pagination-sm">
+    <li class="page-item">
+      <%= link_to "Update this item", edit_article_path, :class => "page-link" %>
+    </li>
+    <li class="page-item">
+    <%= link_to "Delete this item",
+            article_path(@article),
+            method: :delete,
+            data: { confirm: "Are you sure?" }, :class => "page-link" %>
+    </li>
+  </ul>
+</h2>
+
+<p><%= @article.content %></p>
